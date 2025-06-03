@@ -1,0 +1,107 @@
+# 📚 MongoDB Bookstore Assignment – Week 1
+
+This repository contains the files and queries for the **PLP Bookstore MongoDB Assignment**. The project demonstrates MongoDB fundamentals including database creation, document insertion, CRUD operations, advanced queries, aggregation pipelines, and indexing techniques.
+
+---
+
+## 🛠️ Setup Instructions
+
+### 1. Install MongoDB
+
+- Download and install **MongoDB Community Edition** from [https://www.mongodb.com/try/download/community](https://www.mongodb.com/try/download/community)
+- Alternatively, install and configure **MongoDB Compass** for a GUI interface
+
+### 2. Clone the Repository
+
+```bash
+git clone <your-repo-url>
+cd <your-repo-name>
+```
+
+---
+
+## 📂 Files Included
+
+| File Name         | Description |
+|------------------|-------------|
+| `insert_books.js` | JavaScript file to insert 10 book documents into the `books` collection |
+| `queries.js`      | MongoDB queries for CRUD operations, advanced filtering, projection, sorting, pagination, aggregation, and indexing |
+| `README.md`       | This file – instructions and overview of the assignment |
+| `compass_screenshot.png` | Screenshot showing sample data in MongoDB Compass (to be added by you) |
+
+---
+
+## 🗃️ Database Structure
+
+- **Database**: `plp_bookstore`
+- **Collection**: `books`
+- **Document Fields**:
+  - `title` (string)
+  - `author` (string)
+  - `genre` (string)
+  - `published_year` (number)
+  - `price` (number)
+  - `in_stock` (boolean)
+  - `pages` (number)
+  - `publisher` (string)
+
+---
+
+## 📥 Insert Books
+
+To populate your collection:
+
+```bash
+mongosh < insert_books.js
+```
+
+Or copy-paste the script line-by-line in `mongosh`.
+
+---
+
+## 🔍 How to Run Queries
+
+You can run the queries in:
+
+- **MongoDB Shell (mongosh)**
+- **MongoDB Compass → Aggregations/Query Tabs**
+- Paste and run queries from `queries.js`
+
+---
+
+## 🔎 Sample Queries (from `queries.js`)
+
+- Find all books in a specific genre
+- Find books published after a certain year
+- Find books by a specific author
+- Update the price of a specific book
+- Delete a book by its title
+- Find books in stock and published after 2010
+- Sort by price (ascending/descending)
+- Limit and skip (pagination)
+- Aggregation: average price per genre, most published author, count per decade
+- Indexing:
+  - Create index on `title`
+  - Create compound index on `author` and `published_year`
+  - Use `.explain("executionStats")` to analyze performance
+
+---
+
+## 📸 Screenshot
+
+A screenshot of data in MongoDB Compass:
+
+- Database: `plp_bookstore`
+- Collection: `books`
+- Show the inserted documents and collections
+
+Saved as `compass_screenshot.png`.
+
+---
+
+
+
+## 👨‍🏫 Author
+
+- Name: ** Ian Cliff Wende**
+- MongoDB Practice – Power Learn Project
